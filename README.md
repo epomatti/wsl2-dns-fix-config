@@ -26,7 +26,7 @@ wsl --shutdown
 In case you just want the sources file you can get it from the [releases](https://github.com/epomatti/wsl2-dns-fix/releases) section:
 
 ```sh
-curl -L https://github.com/epomatti/wsl2-dns-fix/archive/refs/tags/1.0.0.tar.gz -o wsl2-dnsfix.tar.gz
+curl -L https://github.com/epomatti/wsl2-dns-fix/archive/refs/tags/v1.0.0.tar.gz -o wsl2-dnsfix.tar.gz
 tar -xf wsl2-dnsfix.tar.gz
 ```
 
