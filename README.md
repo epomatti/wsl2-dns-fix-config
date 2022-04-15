@@ -1,6 +1,8 @@
 # WSL2 DNS fix
 
-Use this to make your WSL image run with Google `8.8.8.8` name resolver.
+One-liner shell script that setup your WSL image to use custom name resolution from Google.
+
+This will help you prevent name resolution issues when coding and falling into those issues.
 
 ## Usage
 
@@ -13,20 +15,18 @@ Clone the repo, `cd` into it and run the configuration script:
 sudo sh ./run.sh
 ```
 
-Restart WSL from your Windows terminal:
+You can now restart WSL from your favorite Windows terminal and it should work:
 
 ```ps1
 wsl --shutdown
 ```
 
-Your WSL image is now configured.
-
 ## What it does
 
-[`run.sh`](./run.sh) script will perform the following tasks:
+The [`run.sh`](./run.sh) script will perform these tasks:
 
-1. Delete (rm) `/etc/wsl.conf` and `/etc/resolv.conf` files
-2. Create the new ".conf" files (available in the [dist](./dist/)) setting Google DNS for name resolution and preventing WSL from overriding it:
+1. Delete the following files: `/etc/wsl.conf` and `/etc/resolv.conf`
+2. Create the new ".conf" files (pre-created in the [dist](./dist/) folder) setting Google DNS for name resolution and preventing WSL from overriding it:
 ```sh
 # /etc/wsl.conf
 [network]
@@ -37,9 +37,11 @@ nameserver 8.8.8.8
 ```
 3. Make `/etc/resolv.conf` immutable
 
-## Sources
+## Contributing
 
-This gist was pretty useful and has more info if need be.
+Feel free to open an issue/discussion or send a pull request.
+
+## Source / Credits
 
 ```
 https://gist.github.com/coltenkrauter/608cfe02319ce60facd76373249b8ca6
