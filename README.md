@@ -6,19 +6,28 @@ This will help you prevent name resolution issues when coding and falling into t
 
 ## Usage
 
-Clone the repo, `cd` into it and run the configuration script:
+Simply execute this shell file:
 
 ```bash
 # Debian/Ubuntu
 sudo sh ./run.sh
 ```
 
-The above command will delete `/etc/resolv.conf` and `/etc/wsl.conf` files, so don't need to worry on a fresh installation.
+_Caution: It'll delete `/etc/resolv.conf` and `/etc/wsl.conf` files. Don't need to worry on a fresh installation._
 
 You can now restart WSL from your favorite Windows terminal, and it should work:
 
 ```ps1
 wsl --shutdown
+```
+
+#### Without clonning with git
+
+In case you just want the sources file you can get it from the [releases](https://github.com/epomatti/wsl2-dns-fix/releases) section:
+
+```sh
+curl -L https://github.com/epomatti/wsl2-dns-fix/archive/refs/tags/1.0.0.tar.gz -o wsl2-dnsfix.tar.gz
+tar -xf wsl2-dnsfix.tar.gz
 ```
 
 ## What it does
