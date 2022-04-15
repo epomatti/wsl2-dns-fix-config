@@ -6,7 +6,7 @@ This will help you prevent name resolution issues when coding and falling into t
 
 ## Usage
 
-Simply execute this shell file:
+Simply clone this repository and execute this shell:
 
 ```bash
 # Debian/Ubuntu
