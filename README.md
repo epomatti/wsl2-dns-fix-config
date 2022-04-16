@@ -1,29 +1,24 @@
-# WSL2 DNS fix
+# WSL2 DNS Fix/Config
 
-One-liner shell script that setup your WSL image to use custom name resolution from Google.
-
-This will help you prevent name resolution issues when coding and falling into those issues.
+One-liner shell script that will setup your WSL image to use custom nameserver `8.8.8.8` from Google.
 
 ## Usage
 
-Simply clone this repository and execute this shell:
+Clone it and run the shell:
 
 ```bash
-# Debian/Ubuntu
 sudo sh ./run.sh
 ```
+Restart WSL:
 
-_Caution: It'll delete `/etc/resolv.conf` and `/etc/wsl.conf` files. Don't need to worry on a fresh installation._
-
-You can now restart WSL from your favorite Windows terminal, and it should work:
-
-```ps1
+```
 wsl --shutdown
 ```
+All done. Make sure you read [what it does](#what-it-does).
 
-#### Without clonning with git
+---
 
-In case you just want the sources file you can get it from the [releases](https://github.com/epomatti/wsl2-dns-fix/releases) section:
+Also available as a release (no git required):
 
 ```sh
 curl -L https://github.com/epomatti/wsl2-dns-fix/archive/refs/tags/v1.0.0.tar.gz -o wsl2-dnsfix.tar.gz
@@ -41,7 +36,8 @@ The [`run.sh`](./run.sh) script will perform these tasks:
     # /etc/wsl.conf
     [network]
     generateResolvConf = false
-    
+    ```
+    ```sh
     # /etc/resolv.conf
     nameserver 8.8.8.8
     ```
