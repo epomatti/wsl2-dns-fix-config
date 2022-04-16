@@ -48,6 +48,8 @@ The [`run.sh`](./run.sh) script will perform these tasks:
 
 Feel free to open an issue/discussion or send a pull request.
 
+Tested on Ubuntu 20.04
+
 ## Source / Credits
 
 ```
