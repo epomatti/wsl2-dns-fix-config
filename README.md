@@ -1,5 +1,7 @@
 # WSL2 DNS Fix/Config
 
+[![shell](https://github.com/epomatti/wsl2-dns-fix-config/actions/workflows/shell.yml/badge.svg)](https://github.com/epomatti/wsl2-dns-fix-config/actions/workflows/shell.yml)
+
 One-liner shell script that will setup your WSL image to use custom nameserver `8.8.8.8` from Google.
 
 ## Usage
