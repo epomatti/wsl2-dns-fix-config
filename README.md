@@ -21,7 +21,7 @@ All done. Make sure you read [what it does](#what-it-does).
 Also available as a release (no git required):
 
 ```sh
-curl -L https://github.com/epomatti/wsl2-dns-fix/archive/refs/tags/v1.0.0.tar.gz -o wsl2-dnsfix.tar.gz
+curl -L https://github.com/epomatti/wsl2-dns-fix-config/archive/refs/tags/v1.0.0.tar.gz -o wsl2-dnsfix.tar.gz
 tar -xf wsl2-dnsfix.tar.gz
 ```
 
