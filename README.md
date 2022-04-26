@@ -20,11 +20,21 @@ All done. Make sure you read [what it does](#what-it-does).
 
 ---
 
-Also available as a release (no git required):
+Prefer not to clone? You can get the source archive here:
 
 ```sh
-curl -L https://github.com/epomatti/wsl2-dns-fix-config/archive/refs/tags/v1.0.0.tar.gz -o wsl2-dnsfix.tar.gz
+curl -L 'https://github.com/epomatti/wsl2-dns-fix-config/archive/refs/tags/v1.0.0.tar.gz' \
+  -o wsl2-dnsfix.tar.gz
+  
 tar -xf wsl2-dnsfix.tar.gz
+```
+
+Is **github.com** also not resolving? You can try `curl --resolve` with one of GitHub's [IP addresses](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses):
+
+```sh
+curl --resolve 'codeload.github.com:443:20.201.28.149' \
+  'https://codeload.github.com/epomatti/wsl2-dns-fix-config/tar.gz/refs/tags/v1.0.0' \
+  -o wsl2-dnsfix.tar.gz
 ```
 
 ## What it does
