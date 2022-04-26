@@ -29,7 +29,7 @@ curl -L 'https://github.com/epomatti/wsl2-dns-fix-config/archive/refs/tags/v1.0.
 tar -xf wsl2-dnsfix.tar.gz
 ```
 
-Is **github.com** also not resolving? You can try `curl --resolve` with one of GitHub's [IP addresses](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses):
+**github.com** not resolving? You can try `curl --resolve` with one of GitHub's [IP addresses](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses):
 
 ```sh
 curl --resolve 'codeload.github.com:443:20.201.28.149' \
