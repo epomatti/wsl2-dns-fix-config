@@ -16,4 +16,4 @@ cp ./dist/resolv.conf $resolv
 chattr +i $resolv
 
 echo 'WSL name resolution configured'
-echo 'Restart WSL on Windows: "wsl --shudown"'
+echo 'Restart WSL on Windows: "wsl --shutdown"'
