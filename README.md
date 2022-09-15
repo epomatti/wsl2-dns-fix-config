@@ -28,7 +28,9 @@ curl --resolve 'codeload.github.com:443:20.201.28.149' 'https://codeload.github.
 
 tar -xf wsl2-dnsfix.tar.gz
 
-sudo sh wsl2-dns-fix-config-1.0.0/run.sh
+cd wsl2-dns-fix-config-1.0.0
+
+sudo sh ./run.sh
 ```
 This will work in distros like Ubuntu 22.04 which are not recognizing github.com out of the box.
 
