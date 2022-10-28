@@ -34,7 +34,7 @@ sudo sh ./run.sh
 ```
 This will work in distros like Ubuntu 22.04 which are not recognizing github.com out of the box.
 
-Yet another way is to get the archive form the [releases](https://github.com/epomatti/wsl2-dns-fix-config/releases):
+Yet another way is to get the archive from the [releases](https://github.com/epomatti/wsl2-dns-fix-config/releases):
 
 ```sh
 curl -L 'https://github.com/epomatti/wsl2-dns-fix-config/archive/refs/tags/v1.0.0.tar.gz' -o wsl2-dnsfix.tar.gz
