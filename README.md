@@ -19,16 +19,16 @@ wsl --shutdown
 All done. Make sure you read [what it does](#what-it-does).
 
 ---
-#### ℹ️ GitHub DNS not resolving?
+#### ⁉️ GitHub DNS not resolving?
 
 You can try `curl --resolve` with one of GitHub's [IP addresses](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-githubs-ip-addresses) to force DNS resolution:
 
 ```sh
-curl --resolve 'codeload.github.com:443:20.201.28.149' 'https://codeload.github.com/epomatti/wsl2-dns-fix-config/tar.gz/refs/tags/v1.0.0' -o wsl2-dnsfix.tar.gz
+curl --resolve 'codeload.github.com:443:20.201.28.149' 'https://codeload.github.com/epomatti/wsl2-dns-fix-config/tar.gz/refs/tags/v1.0.1' -o wsl2-dnsfix.tar.gz
 
 tar -xf wsl2-dnsfix.tar.gz
 
-cd wsl2-dns-fix-config-1.0.0
+cd wsl2-dns-fix-config-1.0.1
 
 sudo sh ./run.sh
 ```
@@ -37,7 +37,7 @@ This will work in distros like Ubuntu 22.04 which are not recognizing github.com
 Yet another way is to get the archive from the [releases](https://github.com/epomatti/wsl2-dns-fix-config/releases):
 
 ```sh
-curl -L 'https://github.com/epomatti/wsl2-dns-fix-config/archive/refs/tags/v1.0.0.tar.gz' -o wsl2-dnsfix.tar.gz
+curl -L 'https://github.com/epomatti/wsl2-dns-fix-config/archive/refs/tags/v1.0.1.tar.gz' -o wsl2-dnsfix.tar.gz
 ```
 
 ## What it does
