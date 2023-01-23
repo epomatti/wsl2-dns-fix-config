@@ -1,6 +1,6 @@
 # WSL2 DNS Fix/Config
 
-[![shell](https://img.shields.io/github/workflow/status/epomatti/wsl2-dns-fix-config/shell?style=flat)](https://github.com/epomatti/wsl2-dns-fix-config/actions/workflows/shell.yml)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/epomatti/wsl2-dns-fix-config/shell.yml)
 
 One-liner shell script that will setup your WSL2 image to use custom nameserver `8.8.8.8` from Google.
 
