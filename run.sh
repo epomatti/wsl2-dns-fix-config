@@ -15,7 +15,7 @@ cp ./dist/wsl.conf $wsl
 if [ "$1" = "--dnsservers" ]; then
     shift
     # Create a new resolv.conf file with default dns servers
-    cp ./dist/resolv.conf $resolv
+    
     
     #overwrite the resolv.conf with with the given nameservers
     for server in "$@"; do
@@ -26,7 +26,7 @@ else
 fi
 
 # This prevents resolv.conf from being deleted when WSL starts
-#chattr +i $resolv
+chattr +i $resolv
 
 echo 'WSL name resolution configured'
 echo 'Restart WSL on Windows: "wsl --shutdown"'
