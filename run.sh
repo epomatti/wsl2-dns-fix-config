@@ -10,10 +10,23 @@ rm -f $resolv
 
 # Create custom WSL name resolution
 cp ./dist/wsl.conf $wsl
-cp ./dist/resolv.conf $resolv
+
+# Check if --dnsserver argument is provided
+if [ "$1" = "--dnsservers" ]; then
+    shift
+    # Create a new resolv.conf file with default dns servers
+    cp ./dist/resolv.conf $resolv
+    
+    #overwrite the resolv.conf with with the given nameservers
+    for server in "$@"; do
+        echo "nameserver $server" >> $resolv
+    done
+else
+    cp ./dist/resolv.conf $resolv
+fi
 
 # This prevents resolv.conf from being deleted when WSL starts
-chattr +i $resolv
+#chattr +i $resolv
 
 echo 'WSL name resolution configured'
 echo 'Restart WSL on Windows: "wsl --shutdown"'
